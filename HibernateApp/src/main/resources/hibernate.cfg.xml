@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernateProof</property>
+        <property name="hibernate.connection.username">movilidad</property>
+        <property name="hibernate.connection.password">movilidad</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+	    <property name="connection.pool_size">5</property>
+	    <property name="current_session_context_class">thread</property>
+	    
+        <!-- Mapeamos las clases que vayamos a usar-->
+     	<mapping class="com.equilibrha.david.hibernate.models.HbEmployeeWriteReadModel"/>
+    </session-factory>
+</hibernate-configuration>
