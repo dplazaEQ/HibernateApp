@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import com.equilibrha.david.hibernate.models.HbEmployeeWriteReadModel;
 import com.equilibrha.david.hibernate.util.HibernateUtil;
 
-public class HibernateConnectionTest {
+public class HibernateWriteTest {
 
 	public static void main(String[] args) {
         
