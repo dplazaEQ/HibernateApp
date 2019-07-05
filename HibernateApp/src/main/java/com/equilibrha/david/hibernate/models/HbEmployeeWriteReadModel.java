@@ -1,8 +1,11 @@
 package com.equilibrha.david.hibernate.models;
 import java.util.Date;
-
+import javax.persistence.*;
 //Modelo para grabar y leer los datos de la tabla
 
+
+@Entity
+@Table(name = "EQ_HIBERNATE_WRITEREAD")
 public class HbEmployeeWriteReadModel {
 
 
@@ -11,13 +14,18 @@ public class HbEmployeeWriteReadModel {
 	private String employeeSurname;
 	private Date birthDate;
 	
+	public HbEmployeeWriteReadModel() {}
+	
 	public HbEmployeeWriteReadModel(int employeeID, String employeeName, String employeeSurname,Date birthDate) {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
         this.employeeSurname = employeeSurname;
         this.birthDate = birthDate;
     }
-
+	
+    @Id
+    @Column(name = "employeeID")
+    
 	public int getEmployeeID() {
 		return employeeID;
 	}

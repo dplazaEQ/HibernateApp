@@ -14,12 +14,11 @@ public class HibernateConnectionTest {
   
         session.beginTransaction();
         
-        HbEmployeeWriteReadModel employee = new HbEmployeeWriteReadModel(02,"RODRIGO", "ALVARO BRETÓN",new Date());
+        HbEmployeeWriteReadModel employee = new HbEmployeeWriteReadModel(02,"MIGUEL", "RAMIREZ BRETÓN", new Date());
         
         session.save(employee);
-      
+        
         session.getTransaction().commit();
- 
     }
     
 
