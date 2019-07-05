@@ -21,6 +21,8 @@ public class HibernateReadTest {
         Query q = session.createQuery("From HbEmployeeWriteReadModel ");
         
         List<HbEmployeeWriteReadModel> resultList = q.list();
+
+        session.close();
         
         for (HbEmployeeWriteReadModel next : resultList) {
             System.out.println("--------------------------------------");
